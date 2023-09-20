@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://btit46ja626ga"]
 
-[ext_resource type="PackedScene" uid="uid://dyog08gjb4aa4" path="res://DeveloperConsole/Default/Default Console UI.tscn" id="1_bgrle"]
+[ext_resource type="PackedScene" uid="uid://dyog08gjb4aa4" path="res://Assets/Default Console UI.tscn" id="1_bgrle"]
 
 [node name="Node2D" type="Node2D"]
 

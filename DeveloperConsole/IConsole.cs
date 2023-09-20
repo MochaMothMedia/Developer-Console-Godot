@@ -8,14 +8,14 @@ namespace MochaMothMedia.DeveloperConsole
 
         void SetActive(bool active);
         void RegisterCommand(IConsoleCommand command);
-        void RegisterPreProcessCommand(IPreProcessCommand preProcessCommand);
+        void RegisterPreProcessCommand(IPreProcessor preProcessCommand);
         T GetCommand<T>() where T : class, IConsoleCommand;
-        T GetPreProcessCommand<T>() where T : class, IPreProcessCommand;
+        T GetPreProcessCommand<T>() where T : class, IPreProcessor;
         string ProcessCommand(string input);
-        void PushMessage(string message);
-        void PushMessages(string[] messages);
-        void PushMessageIndented(string message, int indentLevel = 1);
-        void PushMessagesIndented(string[] messages, int indentLevel = 1);
+        void PushMessage(string message, LoggingLevel level = LoggingLevel.Message);
+        void PushMessages(string[] messages, LoggingLevel level = LoggingLevel.Message);
+        void PushMessageIndented(string message, LoggingLevel level = LoggingLevel.Message, int indentLevel = 1);
+        void PushMessagesIndented(string[] messages, LoggingLevel level = LoggingLevel.Message, int indentLevel = 1);
         string GetCommandFromBuffer(int index);
         void ClearLog();
     }

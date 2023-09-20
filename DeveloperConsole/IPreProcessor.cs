@@ -1,6 +1,6 @@
 ﻿namespace MochaMothMedia.DeveloperConsole
 {
-	public interface IPreProcessCommand
+	public interface IPreProcessor
     {
         string Name { get; }
         string Usage { get; }
